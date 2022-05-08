@@ -11,10 +11,10 @@ int x1=0;
 int difference;
 //bool a= true; 
 void tourned50(void){
-    // Set motor direction clockwise
+   
   digitalWrite(dirPin,HIGH); 
   
-  // Spin motor one rotation slowly
+  
   for(int x = 0; x < 50 ; x++) {
     digitalWrite(stepPin,HIGH); 
     delayMicroseconds(1000); 
@@ -51,7 +51,7 @@ void tourneg50(void){
   void tourneg100(void){
       digitalWrite(dirPin,LOW); 
   
-  // Spin motor one rotation slowly
+  
   for(int x = 0; x < 100 ; x++) {
     digitalWrite(stepPin,HIGH); 
     delayMicroseconds(1000); 
@@ -73,7 +73,7 @@ void tourneg50(void){
 
 void setup() {
   
-  // Setup the pins as Outputs
+  
   pinMode(stepPin,OUTPUT); 
   pinMode(dirPin,OUTPUT);
   pinMode(capteur0,INPUT);
@@ -89,8 +89,7 @@ void loop() {
   valeur0= analogRead(capteur0);
   valeur1= analogRead(capteur1);
   
-  // x0= map (valeur0 ,0, 1023 ,0,700);
-  //x1= map (valeur1 ,0, 1023 ,0,700);
+
   
   difference = (abs(valeur0- valeur1));
      Serial.print("valeur1=:");
